@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest operator</title>
+</head>
+<body>
+    
+    <script>
+        // if list of parameters is not specified
+        // the rest operator can be used
+        // as a function declaration parameter
+        // then arguments will be passed to the function
+        // as an array of arguments
+        function sum(...params) {
+            let sum = 0;
+            for (let i = 0; i < params.length; i++) {
+                console.log(params[i]);
+                sum += params[i];
+            }
+            return sum;
+        }
+
+        let x = sum(1,2,3,4);
+        console.log(x);
+    </script>
+</body>
+</html>
